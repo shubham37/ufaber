@@ -70,6 +70,8 @@ class App extends Component {
         case 3:
           prop = "category_name";
           break;
+        default:
+          prop = ''
       }
       if (prop !== ''){
         Cats.sort(dynamicSort(prop));

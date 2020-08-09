@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Menu, Dropdown, Button } from 'antd';
-import { DownOutlined, UserOutlined } from '@ant-design/icons';
+import { DownOutlined } from '@ant-design/icons';
 import axios from "axios";
-// import { tuple } from 'antd/lib/_util/type';
 
 class AddProduct extends Component {
   constructor(props){
@@ -126,7 +125,7 @@ class AddProduct extends Component {
     const category = (
       <Menu onClick={(e) => {this.handleCategoryClick(e)}}>
         {this.state.categories.map((category) => (
-          <Menu.Item key={category.id} icon={<UserOutlined />} >
+          <Menu.Item key={category.id} >
           {category.category_name}
           </Menu.Item>
         ))}
@@ -136,7 +135,7 @@ class AddProduct extends Component {
     const sub_category = (
       <Menu onClick={(e) => {this.handleSubCategoryClick(e)}}>
         {this.state.sub_categories.map((subcategory) => (
-          <Menu.Item key={subcategory.id} icon={<UserOutlined />}>
+          <Menu.Item key={subcategory.id} >
           {subcategory.subcategory_name}
           </Menu.Item>
         ))}
